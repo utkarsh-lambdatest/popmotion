@@ -1,6 +1,7 @@
 postMerge :
   preRun: 
     command:
+      - yarn install  typescript
       - yarn install
       
   
