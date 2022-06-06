@@ -1,7 +1,6 @@
 postMerge :
   preRun: 
     command:
-      - yarn install  typescript
       - yarn install
       
   
@@ -49,21 +48,50 @@ postMerge :
             - node --version
         
 preMerge : 
+  preRun: 
+    command:
+      - yarn install
+      
   
   subModules:          #Not to be changed
      
-    - name:  framesync
-      path : "./packages/framesync"
-      pattern: 
-        - "./packages/framesync/src/_tests/*.ts"
-
-      framework : jest
-      preRun:
-        command:
-          - npm i
-          - npm run build
-
-      postRun:
+      - name:  framesync
+        path : "./packages/framesync"
+        pattern: 
+          - "./src/_tests/test.ts"
+        
+        framework : jest
+        preRun:
+          command:
+            - node --version
+          
+        postRun:
+            command:
+              - node --version 
+        
+      - name:  projection
+        path : "./packages/projection"
+        pattern: 
+          - "./src/__tests__/*test.ts"
+        
+        framework : jest
+        preRun:
+          command:
+            - node --version
+      
+          
+        postRun:
+            command:
+              - node --version 
+      
+      
+      - name:  style-value-types
+        path : "./packages/style-value-types"
+        pattern: 
+          - "./src/_tests/*.ts"
+        
+        framework : jest
+        preRun:
           command:
             - node --version
             
