@@ -6,20 +6,21 @@ postMerge :
   
   subModules:          #Not to be changed
       
+      - name:  popmotion
+        path : "./packages/popmotion"
+        pattern: 
+          - "./src/**/__tests__/*.test.ts"
         
+        framework : jest
+      
+      
       - name:  framesync
         path : "./packages/framesync"
         pattern: 
-          - "./src/_tests/test.ts"
+          - "./src/_tests/*.test.ts"
         
         framework : jest
-        preRun:
-          command:
-            - node --version
-          
-        postRun:
-            command:
-              - node --version 
+        
         
       - name:  projection
         path : "./packages/projection"
@@ -27,14 +28,7 @@ postMerge :
           - "./src/__tests__/*test.ts"
         
         framework : jest
-        preRun:
-          command:
-            - node --version
-      
-          
-        postRun:
-            command:
-              - node --version 
+       
       
       
       - name:  style-value-types
@@ -43,9 +37,7 @@ postMerge :
           - "./src/_tests/*.ts"
         
         framework : jest
-        preRun:
-          command:
-            - node --version
+       
         
 preMerge : 
   
