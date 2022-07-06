@@ -38,42 +38,44 @@ postMerge :
         framework : jest
        
         
-preMerge : 
+preMerge :
+  preRun: 
+    command:
+      - yarn install
+      
   
-  subModules:          #Not to be changed
-     
-    - name:  popmotion
-      path : "./packages/popmotion"
-      pattern: 
-        - "./src/**/__tests__/*.test.ts"
-
-      framework : jest
-
-
-    - name:  framesync
-      path : "./packages/framesync"
-      pattern: 
-        - "./src/_tests/test.ts"
-
-      framework : jest
-
-
-    - name:  projection
-      path : "./packages/projection"
-      pattern: 
-        - "./src/__tests__/*test.ts"
-
-      framework : jest
-
-
-
-    - name:  style-value-types
-      path : "./packages/style-value-types"
-      pattern: 
-        - "./src/_tests/*.ts"
-
-      framework : jest
-            
+  subModules:    
+      
+      - name:  popmotion
+        path : "./packages/popmotion"
+        pattern: 
+          - "./src/**/__tests__/*.test.ts"
+        
+        framework : jest
+      
+      - name:  framesync
+        path : "./packages/framesync"
+        pattern: 
+          - "./src/_tests/test.ts"
+        
+        framework : jest
+        
+        
+      - name:  projection
+        path : "./packages/projection"
+        pattern: 
+          - "./src/__tests__/*test.ts"
+        
+        framework : jest
+       
+      
+      
+      - name:  style-value-types
+        path : "./packages/style-value-types"
+        pattern: 
+          - "./src/_tests/*.ts"
+        
+        framework : jest            
 version : 2.0.2
 nodeVersion : 17.3.1
 tier: medium
