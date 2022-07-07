@@ -12,6 +12,7 @@ postMerge :
           - "./src/**/__tests__/*.test.ts"
         
         framework : jest
+        parallelism: 3
       
       
 #       - name:  framesync
@@ -37,6 +38,7 @@ postMerge :
           - "./src/_tests/*.ts"
         
         framework : jest
+        parallelism: 2
        
         
 preMerge : 
