@@ -77,7 +77,7 @@ preMerge :
 
       framework : jest
             
-version : 2.0.2
+version : 2.0.3
 nodeVersion : 17.3.1
 # tier: medium
 
