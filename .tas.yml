@@ -12,7 +12,7 @@ postMerge :
           - "./src/**/__tests__/*.test.ts"
         
         framework : jest
-        parallelism: 4
+        parallelism: 2
       
       
 #       - name:  framesync
@@ -32,13 +32,13 @@ postMerge :
        
       
       
-      - name:  style-value-types
-        path : "./packages/style-value-types"
-        pattern: 
-          - "./src/_tests/*.ts"
+#       - name:  style-value-types
+#         path : "./packages/style-value-types"
+#         pattern: 
+#           - "./src/_tests/*.ts"
         
-        framework : jest
-        parallelism: 2
+#         framework : jest
+#         parallelism: 2
        
         
 preMerge : 
